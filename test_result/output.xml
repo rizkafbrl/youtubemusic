@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.4 on darwin)" generated="20220512 17:33:41.538" rpa="false" schemaversion="2">
+<suite id="s1" name="LoginScenarioTest" source="/Users/ruangguru/Workspace/example_project/youtubemusic/Suites/LoginScenarioTest.robot">
+<test id="s1-t1" name="Able To Login On Web music.youtube.com Use Google Account">
+<kw name="Open Browser With Specific URL" library="resource">
+<arg>${YOUTUBEMUSICURL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${CHROME}</arg>
+<arg>alias=${BROWSERALIAS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220512 17:33:41.711" level="INFO">Opening browser 'Chrome' to base url 'https://music.youtube.com/'.</msg>
+<status status="PASS" starttime="20220512 17:33:41.710" endtime="20220512 17:33:54.214"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220512 17:33:54.215" endtime="20220512 17:33:54.218"/>
+</kw>
+<status status="PASS" starttime="20220512 17:33:41.710" endtime="20220512 17:33:54.218"/>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="PASS" starttime="20220512 17:33:54.219" endtime="20220512 17:33:57.943"/>
+</kw>
+<status status="PASS" starttime="20220512 17:33:41.709" endtime="20220512 17:33:57.943"/>
+</test>
+<status status="PASS" starttime="20220512 17:33:41.539" endtime="20220512 17:33:57.944"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginScenarioTest">LoginScenarioTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

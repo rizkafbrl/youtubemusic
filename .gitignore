@@ -1,0 +1,5 @@
+test-results/
+*.log
+*.png
+.DS_Store
+.idea

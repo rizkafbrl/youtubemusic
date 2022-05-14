@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+urllib3 = "*"
+selenium = "*"
+lxml = "*"
+requests = "*"
+robotframework = "*"
+robotframework-appiumlibrary = "*"
+robotframework-faker = "*"
+robotframework-seleniumlibrary = "*"
+robotframework-selenium2library = "*"
+robotframework-pabot = "*"
+robotframework-debuglibrary = "*"
+robotframework-requests = "*"
+robotframework-xvfb = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

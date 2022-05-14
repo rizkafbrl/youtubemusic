@@ -1,14 +1,29 @@
 *** Keywords ***
 Login With Eligible User
-    [ARGUMENTS]                             ${GITHUBACCOUNT}
-    Make Sure Gist Was Loded Well
-    Click Sign-in Button
+    [ARGUMENTS]                         ${EMAIL}=${EMAIL}   ${PASSWORD}=${PASSWORD}
+    Go To Sign In Page
+    Insert Email And Password Value     ${EMAIL}        ${PASSWORD}
+    Click Next Button
+    Verify Successfully Login
 
-Insert Username And Password
-    [ARGUMENTS]                             ${GITHUBACCOUNT}
-    Make Sure Username Input Was Loaded
-    Insert Data On Selected Element         ${GITHUBACCOUNT.USERNAME}      name=username
-    Make Sure Password Input Was Loaded
-    Insert Data On Selected Element         ${GITHUBACCOUNT.PASSWORD}      name=password
-    Make Sure Login Was Success             ${GITHUBACCOUNT.USERNAME}
+Go To Sign In Page
+    ${AbleToClick}  Run Keyword And Return Status
+    ...             Click Sign In Button
 
+    Run Keyword If  not ${AbleToClick}
+    ...             Run Keyword and Ignore Error        Handle Alert	                timeout=${DEFAULT_TIMEOUT}
+
+    Verify on Sign In Page
+
+Insert Email And Password Value
+    [ARGUMENTS]     ${EMAIL}=${EMAIL}   ${PASSWORD}=${PASSWORD}
+
+    ${status}       Run Keyword And Return Status
+    ...             Insert Email User   ${EMAIL}
+
+    Run Keyword If  not ${status}       Run Keywords
+    ...             Activated Email Input
+    ...             Insert Email User   ${EMAIL}
+
+    Click Next Button
+    Insert Password User                ${PASSWORD}

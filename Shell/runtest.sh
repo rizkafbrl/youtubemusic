@@ -1,1 +1,0 @@
-robot --outputdir robot_results  ../Scenario

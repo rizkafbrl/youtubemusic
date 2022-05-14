@@ -1,9 +1,7 @@
 
 # Youtube Music Automation
 
-Here was the source code for music.youtube.com
-
-
+Here was the source code for music.youtube.com. The automation test was build based on `selenium` using `robot-framework` as the framework, it has `.robot` script and it's configuration, robot framework are based paython 
 
 ## Requirements
 
@@ -86,4 +84,9 @@ To run specific test-case:
 - [rizkafebrila on Github](https://gitlab.com/rizkafebrila)
 - [rizkafbrl on Gitlab](https://github.com/rizkafbrl)
 
+
+## Flaky Posibility
+
+- Randomly ads, because there are have ads with 3 or 2 or only 1 shown in player` (non subs user)`
+- Network connection problem
 
